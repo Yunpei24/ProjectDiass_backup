@@ -1,0 +1,4 @@
+express
+mysql
+cors
+axios

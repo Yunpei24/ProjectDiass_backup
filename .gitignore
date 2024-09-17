@@ -1,0 +1,5 @@
+# *.xlsx
+# *.ipynb
+/env
+# /web
+node_modules
