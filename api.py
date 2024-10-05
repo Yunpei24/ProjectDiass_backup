@@ -5,7 +5,7 @@ from pydantic import BaseModel
 import pandas as pd
 import joblib
 import numpy as np
-from database import create_engine_mysql
+# from database import create_engine_mysql
 from datetime import date, time
 
 # Charger le modèle entraîné
@@ -14,13 +14,13 @@ model = joblib.load('./models/best_model.pkl')
 # Initialiser FastAPI
 app = FastAPI()
 
-# Add CORS Middleware
+# Ajout du Middleware CORS
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Allows all origins
+    allow_origins=["*"],  # Autoriser toutes les origines
     allow_credentials=True,
-    allow_methods=["*"],  # Allows all methods (POST, GET, etc.)
-    allow_headers=["*"],  # Allows all headers
+    allow_methods=["*"],  # Autoriser toutes les methodes (POST, GET, etc.)
+    allow_headers=["*"],  # Autoriser tous les headers
 )
 # Définir les caractéristiques attendues par le modèle
 class EnergyPredictionRequest(BaseModel):

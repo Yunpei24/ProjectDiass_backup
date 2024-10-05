@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Energy Prediction</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <!-- Custom CSS -->
+    <link href="style.css" rel="stylesheet">
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">Visualisation de l'Energie Produite et Prédite</h1>
+
+        <!-- Section for Charts -->
+        <div class="charts-box mt-4">
+            <div class="row">
+                <div class="col-md-6">
+                    <h3 class="text-center">Histogramme d'Énergie</h3>
+                    <canvas id="energyHistogram"></canvas>
+                </div>
+                <div class="col-md-6">
+                    <h3 class="text-center">Énergie Prédite</h3>
+                    <canvas id="energyCurve"></canvas>
+                </div>
+            </div>
+            <!-- Bouton de redirection -->
+            <div class="text-center mt-4">
+                <a href="prediction.html" class="btn btn-primary">Page de Prédictions</a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center text-lg-start bg-light text-muted">
+        <!-- Footer Content -->
+        <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+            © 2024 Droits d'auteur: <a class="text-reset fw-bold" href="https://mdbootstrap.com/">2JYEN</a>
+        </div>
+    </footer>      
+    <!-- jQuery and Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>

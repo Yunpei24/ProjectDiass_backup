@@ -1,30 +1,30 @@
-document.getElementById('predictionForm').addEventListener('submit', async function(event) {
-    event.preventDefault();
+// document.getElementById('predictionForm').addEventListener('submit', async function(event) {
+//     event.preventDefault();
 
-    const response = await fetch('http://127.0.0.1:8000/predict/', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-            Date: document.getElementById('date').value,
-            Heures: document.getElementById('hours').value,
-            Meteo_Irradience: parseFloat(document.getElementById('meteoIrradience').value),
-            PR_Total_Compteurs: parseFloat(document.getElementById('prTotalCompteurs').value),
-            Ensoleillement: parseFloat(document.getElementById('ensoleillement').value),
-            PR_Reference: parseFloat(document.getElementById('prReference').value),
-            Nombre_Panneau: parseInt(document.getElementById('nombrePanneau').value),
-            Nombre_Onduleur: parseInt(document.getElementById('nombreOnduleur').value),
-        }),
-    });
+//     const response = await fetch('http://127.0.0.1:8000/predict/', {
+//         method: 'POST',
+//         headers: {
+//             'Content-Type': 'application/json',
+//         },
+//         body: JSON.stringify({
+//             Date: document.getElementById('date').value,
+//             Heures: document.getElementById('hours').value,
+//             Meteo_Irradience: parseFloat(document.getElementById('meteoIrradience').value),
+//             PR_Total_Compteurs: parseFloat(document.getElementById('prTotalCompteurs').value),
+//             Ensoleillement: parseFloat(document.getElementById('ensoleillement').value),
+//             PR_Reference: parseFloat(document.getElementById('prReference').value),
+//             Nombre_Panneau: parseInt(document.getElementById('nombrePanneau').value),
+//             Nombre_Onduleur: parseInt(document.getElementById('nombreOnduleur').value),
+//         }),
+//     });
 
-    if (response.ok) {
-        const data = await response.json();
-        document.getElementById('predictedEnergy').innerText = `${data.predicted_energy} kWh`;
-    } else {
-        document.getElementById('predictedEnergy').innerText = 'Error occurred.';
-    }
-});
+//     if (response.ok) {
+//         const data = await response.json();
+//         document.getElementById('predictedEnergy').innerText = `${data.predicted_energy} kWh`;
+//     } else {
+//         document.getElementById('predictedEnergy').innerText = 'Error occurred.';
+//     }
+// });
 
 /////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////
